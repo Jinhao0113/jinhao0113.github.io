@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
+title: 'lz2019hjh Blog'
+subtitle: '胡锦浩的博客 | lz2019hjh Blog'
+description: '明天要做更好的自己'
+keywords: "胡锦浩,lz2019hjh,lz2019hjh blog,hjh"
+author: lz2019hjh
+language: zh-cn
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://lz2019hjh.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
