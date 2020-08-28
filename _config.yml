@@ -101,4 +101,8 @@ theme: obsidian
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/lz2019hjh/lz2019hjh.github.io
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: master
+  
