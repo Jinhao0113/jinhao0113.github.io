@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>vmware安装ubuntu - lz2019hjh Blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content="明天要做更好的自己,如果是一个合格的电脑作死玩家，就一定要会使用虚拟机进行进一步作死一些日常工作。
+之前已经介绍过如何用vmware安装windows10，于是为了尝试一下linux，我进行了进一步作死
+然后作为一个菜,"> 
+    <meta name="author" content="lz2019hjh"> 
+    <link rel="alternative" href="atom.xml" title="lz2019hjh Blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.ico"> 
+    <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">lz2019hjh Blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.ico" alt="" data-url="https://lz2019hjh.github.io">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">vmware安装ubuntu</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(/img/cover.jpg) ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+                
+                八月 08, 2020
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/08/08/2020-0-08-vmware%E5%AE%89%E8%A3%85ubuntu/" title="vmware安装ubuntu" class="">vmware安装ubuntu</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    5.8k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    5 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" rel="tag">虚拟机</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <p>如果是一个合格的电脑<del>作死</del>玩家，就一定要会使用虚拟机进行<del>进一步作死</del>一些日常工作。</p>
+<p>之前已经介绍过如何用<code>vmware</code>安装<code>windows10</code>，于是为了尝试一下<code>linux</code>，我进行了<del>进一步作死</del></p>
+<p>然后作为一个菜鸡，只能玩玩入门级的<code>ubuntu linux</code>了</p>
+<h3 id="材料准备"><a href="#材料准备" class="headerlink" title="材料准备"></a>材料准备</h3><ol>
+<li>一台装有<code>vmware</code>的<code>mac</code></li>
+<li><code>ubuntu</code>系统镜像<a target="_blank" rel="noopener" href="http://mirrors.163.com/ubuntu-releases/">网易镜像站下载地址</a>，和<code>windows7</code>镜像<a target="_blank" rel="noopener" href="https://msdn.itellyou.cn/">msdn下载</a>实在不行，有<code>windows10</code>的也行，不过在安装<code>windows</code>的时候要花更多时间</li>
+<li>时间(一个小时左右)</li>
+</ol>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>首先，经过我多年的经验，<code>vmware</code>安装<code>ubuntu</code>一定无法获得很好的清晰度。然而，<code>windows</code>却有，所以我们可以用<code>ubuntu</code>覆盖<code>windows</code>。</p>
+<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><h5 id="windows安装"><a href="#windows安装" class="headerlink" title="windows安装"></a>windows安装</h5><p>选择镜像文件<br><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkv6iyqyyj30yz0u07lp.jpg"></p>
+<p>点击继续</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkv7fdzvtj30yz0u0ne9.jpg"></p>
+<p>因为不需要使用这台<code>windows</code>所以账户名，密码乱填都可以。我在这里使用专业版</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkv991kijj30yz0u0wvo.jpg"></p>
+<p>再点击继续，跳出来叫你输入密匙直接<code>不输入并继续使用</code></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkvb8zn59j30yz0u0k8o.jpg"></p>
+<p>然后点击右边那个<code>更加独立</code></p>
+<p>再点击继续</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkvbxzxwkj30yz0u0tqg.jpg"></p>
+<p>点击<code>自定设置</code>,然后保存好虚拟机</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkvd5lkxhj31560u0naw.jpg"></p>
+<p>然后跳出</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkvdhahcdj313b0u0h4v.jpg"></p>
+<p>先改<code>处理器和内存</code></p>
+<p>改成这样</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkvekg4fpj310z0u04bn.jpg"></p>
+<p><code>显示器</code>改成这样</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkvfs7mn3j313d0u0qhb.jpg"></p>
+<p>然后将<code>硬盘</code>改成</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkvhcafn2j315s0n2doc.jpg"></p>
+<p>其他可以不用改，关闭这个窗口，然后打开虚拟机</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkviojx9hj310h0u0dyp.jpg"></p>
+<p>安装中…</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkvj69xmrj31c00u0tbh.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkvk3lu9sj31c00u0h7h.jpg"></p>
+<p>等它安装完<code>vmware tools</code>以后将其关机</p>
+<p>经过<code>40min</code>的奋斗，终于安装完了<code>windows7</code></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkwq4ber6j31c00u07wk.jpg"></p>
+<p>关机，然后打开设置，将<code>软盘</code>移除(没啥卵用)</p>
+<p>然后点击<code>CD/DVD(SATA)</code>点击</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkwtb5wf0j315s0higs7.jpg"></p>
+<p>将下拉框拉到下面那个</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkwui8qiwj31a00u0kao.jpg"></p>
+<p>选择你下载的<code>ubuntu镜像</code>，点击打开</p>
+<p>然后点击<code>显示全部</code>回到主页面</p>
+<p>点击的三行的<code>启动磁盘</code></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkwwdt1thj315s0ls11q.jpg"></p>
+<p>选择从<code>CD/DVD</code>启动</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkwxal3qwj31c00u0mzw.jpg"></p>
+<p>正常的<code>ubuntu</code>启动</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkwz7taucj31c00u0tc3.jpg"></p>
+<p><code>ubuntu20.04</code>专有</p>
+<p>打开<code>ubuntu</code>安装界面</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkx1ejnw7j31c00u0dmq.jpg"></p>
+<p>左边是语言，我这边选择<code>中文（简体）</code>，点击右侧的<code>安装Ubuntu</code></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkx40hn14j31c00u0jxt.jpg"></p>
+<p>点击继续</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkx4fxk25j31c00u00yv.jpg"></p>
+<p>自己选择选项，然后点击<code>继续</code></p>
+<p>安装类型选择<code>清除整个磁盘</code></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkx7vxgudj31c00u04qu.jpg"></p>
+<p>然后点击现在安装</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkx9guhqej31c00u04qu.jpg"></p>
+<p>点击继续</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghkxazc3orj31c00u07wm.jpg"></p>
+<p>再点击继续</p>
+<p>然后是注册</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghpjfxyxbij31c00u01l2.jpg"></p>
+<p>注册完了以后点击继续</p>
+<p>就开始了安装</p>
+<p>waiting……</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghpjgx588cj31c00u04qu.jpg"></p>
+<p>在<code>ubuntu18.04</code>开始，安装时会自动安装<code>vmware tools</code></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghpjld0eazj31c00u0kjq.jpg"></p>
+<p>点击<code>现在重启</code></p>
+<p>过程中，可能会让你按回车</p>
+<p>重启完就可以欢乐使用<code>ubuntu</code>了。</p>
+<p>登陆后</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghpjp11qaaj31c00u0qb1.jpg"></p>
+<p>不停点右上角的按钮</p>
+<p>接下去是安装<code>vmware tools</code></p>
+<p>在命令行里输入</p>
+<pre><code>open /Applications/VMware\ Fusion.app/Contents/Library/isoimages </code></pre>
+<p>然后找到<code>linux.iso</code>复制到桌面。</p>
+<p>将<code>~/Desktop/linux.iso</code>这个文件连接到虚拟机。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghpk4xd5fwj31c00u0gu4.jpg"></p>
+<p>点击那个光盘</p>
+<p>将里面那个压缩包打开，解压到桌面</p>
+<p>然后打开目录</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghpk7rgtf1j31c00u0n5p.jpg"></p>
+<p>在终端里打开</p>
+<p>输入<code>sudo ./vmware*.pl</code></p>
+<p>输入密码后</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghpk8ucxfxj31c00u0gtw.jpg"></p>
+<p>输入<code>yes</code>然后回车。</p>
+<p>接下去只要不停按回车</p>
+<p>然后你会发现</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghpkaqnb0bj31c00u0wtl.jpg"></p>
+<p>加载出来了</p>
+<p>然后打开设置</p>
+<p>点击显示器</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghpkbmed9zj31c00u0n6u.jpg"></p>
+<p>将<code>100%</code>改为<code>200%</code>点击右上角的应用，然后点击<code>保留更改</code>。</p>
+<p>这样就可以快乐使用<code>ubuntu</code>了。</p>
+<p>在下一篇文章中，会介绍<code>ubuntu</code>的优化及设置。</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='true'
+        data-ci='053261cb6e19f25a0368'
+        data-cs='010762d01d56d7dd7d007e11ff33e5ba15674c99'
+        data-r='lz2019hjh.github.io'
+        data-o='lz2019hjh'
+        data-a='lz2019hjh'
+        data-d=''
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gi6k2s7rm7j3069068wee.jpg" height=300 width=300></img>
+                    <p>lz2019hjh</p>
+                    <span></span>
+                    <dl>
+                        <dd><a href="https://github.com/lz2019hjh" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                        <dd><a href="" target="_blank"><span
+                                    class=" iconfont icon-twitter"></span></a></dd>
+                        <dd><a href="" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">10 <p>Articles</p></a></li>
+                    <li><a href="/categories">0 <p>Categories</p></a></li>
+                    <li><a href="/tags">14 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%90%E6%96%99%E5%87%86%E5%A4%87"><span class="toc-number">1.</span> <span class="toc-text">材料准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-number">2.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B"><span class="toc-number">3.</span> <span class="toc-text">开始</span></a></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2020
+        <span class="gradient-text">
+            lz2019hjh
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.4" target="_blank" rel="noopener">v1.4.4</a></small>
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+ 
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-149874671-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149874671-1');
+</script>
+ 
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['', ''],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+</html>

@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>mac上利用vmware安装windows10 - lz2019hjh Blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content="明天要做更好的自己,
+相信用苹果电脑的小伙伴们一定会被mac上一些应用的缺少或者不习惯而想装上windows对吧,再不换电脑的情况下解决方案有两个双系统与虚拟机,在我看来,虚拟机会比双系统效率与性能更强,安装更方便.
+,"> 
+    <meta name="author" content="lz2019hjh"> 
+    <link rel="alternative" href="atom.xml" title="lz2019hjh Blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.ico"> 
+    <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">lz2019hjh Blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.ico" alt="" data-url="https://lz2019hjh.github.io">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">mac上利用vmware安装windows10</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(/img/cover.jpg) ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+                
+                三月 29, 2020
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/03/29/2020-03-29-mac%E4%B8%8A%E5%88%A9%E7%94%A8vmware%E5%AE%89%E8%A3%85windows10/" title="mac上利用vmware安装windows10" class="">mac上利用vmware安装windows10</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    4.2k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    4 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/windows10/" rel="tag">windows10</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" rel="tag">虚拟机</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <blockquote>
+<p>相信用苹果电脑的小伙伴们一定会被<code>mac</code>上一些应用的缺少或者不习惯而想装上<code>windows</code>对吧,再不换电脑的情况下解决方案有两个<code>双系统</code>与<code>虚拟机</code>,在我看来,<code>虚拟机</code>会比<code>双系统</code>效率与性能更强,安装更方便.</p>
+</blockquote>
+<h3 id="工具及软件准备"><a href="#工具及软件准备" class="headerlink" title="工具及软件准备"></a>工具及软件准备</h3><p>一台装有<strong>mac</strong>的电脑,<strong>vmware</strong>和<strong>windows10的镜像文件</strong></p>
+<h3 id="材料收集"><a href="#材料收集" class="headerlink" title="材料收集"></a>材料收集</h3><p><strong>vmware</strong><a target="_blank" rel="noopener" href="https://download3.vmware.com/software/fusion/file/VMware-Fusion-11.5.3-15870345.dmg">官方下载网址</a></p>
+<p><strong>windows10镜像文件</strong><a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/software-download/windows10ISO?36261b60-2f68-4336-abe2-4b00f210b6aa=True">官方下载网址</a>自己找一个适合自己的版本下载</p>
+<blockquote>
+<p>上述文件下载很慢很慢,可以使用迅雷下载之类的方法加速</p>
+</blockquote>
+<h3 id="激活vmware"><a href="#激活vmware" class="headerlink" title="激活vmware"></a>激活vmware</h3><p>网上有很多激活码,随便尝试几个,总有可以的</p>
+<p>我用的是</p>
+<pre><code>XKZYV-PK9CC-A1Y0X-K5HZL-Y65ZV</code></pre>
+<p>现在不一定还可以用</p>
+<h3 id="开始安装windows10"><a href="#开始安装windows10" class="headerlink" title="开始安装windows10"></a>开始安装windows10</h3><p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdb52li3a2j31850u0qms.jpg"></p>
+<p>然后点击<code>新建</code></p>
+<p>会出现</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdb54ndrnoj30yz0u07ia.jpg"></p>
+<p>打开你<strong>Windows10镜像文件的下载目录</strong></p>
+<p>接下去将文件拖到窗口里</p>
+<p>点击继续</p>
+<p>然后可以看见</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdirqc53n5j30yz0u0wvk.jpg"></p>
+<p>写好账户名和密码</p>
+<p>然后选择你的windows10版本</p>
+<p>我用的是<code>windows10 pro Education</code></p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdirstszi6j30yz0u0h2x.jpg"></p>
+<p>然后点击继续</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdirtnm8dkj30yz0u0dwv.jpg"></p>
+<p>点击 <img src="https://tva1.sinaimg.cn/large/00831rSTly1gdirusss0oj309s01a0sx.jpg"></p>
+<p>然后点击 <img src="https://tva1.sinaimg.cn/large/00831rSTly1gdirvtdmnfj309e08o755.jpg"></p>
+<p>还是点击继续</p>
+<p>接下去，进行一些虚拟机的配置</p>
+<p>点击<img src="https://tva1.sinaimg.cn/large/00831rSTly1gdirx93nvdj305e01qmx8.jpg"></p>
+<p>保存好你的虚拟机命名</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdiryljq0nj31560u0wqz.jpg"></p>
+<p>点击储存</p>
+<p>然后会跳出</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdirzcdx9hj31340u0dz3.jpg"></p>
+<p>强烈建议将内存开到<code>4096MB</code>,因为<code>windows10</code>有点大。</p>
+<p>点击<img src="https://tva1.sinaimg.cn/large/00831rSTly1gdis163zw8j304q054q38.jpg"></p>
+<p>看到</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdis3djkj0j315s0pktht.jpg"></p>
+<p>改为</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdis4ic1foj315s0pkaj8.jpg"></p>
+<p>然后点击<code>显示全部</code></p>
+<p>点击<img src="https://tva1.sinaimg.cn/large/00831rSTly1gdiy9mq3dvj304s04u0t8.jpg"></p>
+<p>在点击高级选项</p>
+<p>将<code>拆分为多个文件</code>，点掉，大小自己改</p>
+<p>最后</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdiybktn1dj315s0n2471.jpg"></p>
+<p>长这样</p>
+<p>然后就可以启动虚拟机了</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdiycnolrcj310h0u0tru.jpg"></p>
+<p>点击中间的三角形</p>
+<p>接下去就只要坐等一段时间</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdiyf0j2v1j31140u0178.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdiyfy3nuqj31140u04e0.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdiz6wd8cuj31c00u0b29.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdizc2u6q6j31c00u04qs.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdizd68teoj31c00u01kz.jpg"></p>
+<p>这样就装完了</p>
+<p>接下去，我们来激活<code>windows10</code>吧</p>
+<p>方法很多（不花钱），下面我介绍一种我成功的（貌似是永久的）</p>
+<p>点击<a href="https://lz2019hjh.github.io/doc/HWIDGEN.zip">下载</a></p>
+<p>解压后</p>
+<p>在共享文件夹中打开</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdj07361mpj31c00u0npd.jpg"></p>
+<p>复制到桌面</p>
+<p>管理员运行<code>Activation.cmd</code></p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdj0b2sv25j31c00u0qv5.jpg"></p>
+<p>按回车。</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdj0dvciw0j31c00u0qv5.jpg"></p>
+<p>按<code>1</code></p>
+<p>等一会就可以激活了</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gdj0ct1amwj31c00u0qv5.jpg"></p>
+<p>这样就可以快乐使用<code>windows10</code></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='true'
+        data-ci='053261cb6e19f25a0368'
+        data-cs='010762d01d56d7dd7d007e11ff33e5ba15674c99'
+        data-r='lz2019hjh.github.io'
+        data-o='lz2019hjh'
+        data-a='lz2019hjh'
+        data-d=''
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gi6k2s7rm7j3069068wee.jpg" height=300 width=300></img>
+                    <p>lz2019hjh</p>
+                    <span></span>
+                    <dl>
+                        <dd><a href="https://github.com/lz2019hjh" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                        <dd><a href="" target="_blank"><span
+                                    class=" iconfont icon-twitter"></span></a></dd>
+                        <dd><a href="" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">10 <p>Articles</p></a></li>
+                    <li><a href="/categories">0 <p>Categories</p></a></li>
+                    <li><a href="/tags">14 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E5%8F%8A%E8%BD%AF%E4%BB%B6%E5%87%86%E5%A4%87"><span class="toc-number">1.</span> <span class="toc-text">工具及软件准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%90%E6%96%99%E6%94%B6%E9%9B%86"><span class="toc-number">2.</span> <span class="toc-text">材料收集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BF%80%E6%B4%BBvmware"><span class="toc-number">3.</span> <span class="toc-text">激活vmware</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85windows10"><span class="toc-number">4.</span> <span class="toc-text">开始安装windows10</span></a></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2020
+        <span class="gradient-text">
+            lz2019hjh
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.4" target="_blank" rel="noopener">v1.4.4</a></small>
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+ 
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+ 
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+ 
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+ 
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+  
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+   
+<script src="/js/busuanzi.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($('span[id^="busuanzi_"]').length) {
+      initialBusuanzi();
+    }
+  });
+</script>
+ 
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-149874671-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-149874671-1');
+</script>
+ 
+
+<script>
+  function initialTyped() {
+    var typedTextEl = $('.typed-text');
+    if (typedTextEl && typedTextEl.length > 0) {
+      var typed = new Typed('.typed-text', {
+        strings: ['', ''],
+        typeSpeed: 90,
+        loop: true,
+        loopCount: Infinity,
+        backSpeed: 20,
+      });
+    }
+  }
+
+  if ($('.article-header') && $('.article-header').length) {
+    $(document).ready(function () {
+      initialTyped();
+    });
+  }
+</script>
+
+
+
+
+</html>
