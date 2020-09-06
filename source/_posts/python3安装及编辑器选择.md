@@ -1,7 +1,7 @@
 ---
 title: python3安装及编辑器选择
 date: 2020-09-06 15:46:18
-tags:
+tags: -python
 ---
 
 # 前言
@@ -73,3 +73,9 @@ $ sudo apt-get install python
 等一会
 
 然后就安装完了
+
+一些插件安装,见 [https://lz2019hjh.github.io/2020/03/09/2020-03-09-c++入门-编辑器选择/#关于c-编辑器选择](https://lz2019hjh.github.io/2020/03/09/2020-03-09-c++入门-编辑器选择/#关于c-编辑器选择)
+
+然后再安装一个`python`的插件，搜索`python`，安装第一个。
+
+然后就可以快乐使用`python3`了。
