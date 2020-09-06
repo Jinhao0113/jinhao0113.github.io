@@ -12,7 +12,8 @@ tags: -github
 ### Start
 
 使用[https://www.ipaddress.com/](https://www.ipaddress.com/)查询以下网址的真是IP地址
-```
+
+```txt
 gist.github.com
 github.com
 www.github.com
@@ -37,13 +38,13 @@ user-images.githubusercontent.com
 
 然后将其改为
 
-```
+```txt
 IP + 域名的格式
 ```
 
 以下是我查出来的结果
 
-```
+```txt
 140.82.112.4 gist.github.com
 140.82.114.4 github.com
 140.82.112.4 www.github.com
