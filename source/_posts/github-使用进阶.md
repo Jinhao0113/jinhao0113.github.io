@@ -1,7 +1,7 @@
 ---
 title: github 使用进阶
 date: 2020-08-31 17:14:42
-tags: - github
+tags: -github
 ---
 
 # 前言
