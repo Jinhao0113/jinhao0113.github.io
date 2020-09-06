@@ -39,7 +39,7 @@ $ sudo dpkg -i wps-office_11.1.0.9615_amd64.deb # 安装WPS office
 
 ### sources.list
 
-> 使用清华源
+> 使用网易源
 
 * ubuntu 14.04
 
